@@ -29,9 +29,12 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({
+    Key? key,
+    this.title,
+  }) : super(key: key);
 
-  final String title;
+  final String? title;
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -79,7 +82,6 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-
   @override
   void didUpdateWidget(MyHomePage oldWidget) {
     super.didUpdateWidget(oldWidget);
@@ -92,12 +94,12 @@ class _MyHomePageState extends State<MyHomePage> {
       Container(color: backgroundColor, child: child);
 
   Widget wrapOrder(Widget child) => Stack(children: <Widget>[
-    child,
-    Positioned(
-      left: 8,
-      bottom: 0,
-      child: Text("${_orderNum++}",
-          style: TextStyle(color: Colors.white, fontSize: 18)),
-    ),
-  ]);
+        child,
+        Positioned(
+          left: 8,
+          bottom: 0,
+          child: Text("${_orderNum++}",
+              style: TextStyle(color: Colors.white, fontSize: 18)),
+        ),
+      ]);
 }

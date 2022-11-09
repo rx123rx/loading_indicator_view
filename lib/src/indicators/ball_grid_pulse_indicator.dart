@@ -76,13 +76,13 @@ double _lastExtent = .0;
 
 class _BallGridPulseIndicatorPainter extends CustomPainter {
   _BallGridPulseIndicatorPainter({
-    this.animationValue,
-    this.minRadius,
-    this.maxRadius,
-    this.minAlpha,
-    this.maxAlpha,
-    this.spacing,
-    this.ballColor,
+    required this.animationValue,
+    required this.minRadius,
+    required this.maxRadius,
+    required this.minAlpha,
+    required this.maxAlpha,
+    required this.spacing,
+    required this.ballColor,
   })  : radiusList = <double>[
           minRadius + (maxRadius - minRadius) * 0.9,
           minRadius + (maxRadius - minRadius) * 0.8,

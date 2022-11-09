@@ -28,12 +28,12 @@ class BallZigZagIndicator extends StatefulWidget {
 
 class _BallZigZagIndicatorState extends State<BallZigZagIndicator>
     with SingleTickerProviderStateMixin {
-  AnimationController _controller;
-  Animation<double> _horizontal;
-  Animation<double> _rightWaistX;
-  Animation<double> _rightWaistY;
-  Animation<double> _leftWaistX;
-  Animation<double> _leftWaistY;
+  late AnimationController _controller;
+  late Animation<double> _horizontal;
+  late Animation<double> _rightWaistX;
+  late Animation<double> _rightWaistY;
+  late Animation<double> _leftWaistX;
+  late Animation<double> _leftWaistY;
 
   @override
   void initState() {
@@ -116,13 +116,13 @@ class _BallZigZagIndicatorState extends State<BallZigZagIndicator>
 
 class _BallZigZagIndicatorPainter extends CustomPainter {
   _BallZigZagIndicatorPainter({
-    this.horizontal,
-    this.rightWaistX,
-    this.rightWaistY,
-    this.leftWaistX,
-    this.leftWaistY,
-    this.ballRadius,
-    this.color,
+    required this.horizontal,
+    required this.rightWaistX,
+    required this.rightWaistY,
+    required this.leftWaistX,
+    required this.leftWaistY,
+    required this.ballRadius,
+    required this.color,
   });
 
   final double horizontal;

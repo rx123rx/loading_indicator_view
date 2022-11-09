@@ -22,8 +22,8 @@ class BallScaleIndicator extends StatefulWidget {
 
 class _BallScaleIndicatorState extends State<BallScaleIndicator>
     with SingleTickerProviderStateMixin {
-  Animation<double> _animation;
-  AnimationController _controller;
+  late Animation<double> _animation;
+  late AnimationController _controller;
 
   @override
   void initState() {
@@ -71,9 +71,9 @@ class _BallScaleIndicatorState extends State<BallScaleIndicator>
 
 class _BallScaleIndicatorPainter extends CustomPainter {
   _BallScaleIndicatorPainter({
-    this.animationValue,
-    this.radius,
-    this.ballColor,
+    required this.animationValue,
+    required this.radius,
+    required this.ballColor,
   });
 
   final double animationValue;

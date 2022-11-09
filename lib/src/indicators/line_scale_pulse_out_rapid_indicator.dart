@@ -81,13 +81,13 @@ double _lastExtent = .0;
 
 class _LineScalePulseOutRapidIndicatorPainter extends CustomPainter {
   _LineScalePulseOutRapidIndicatorPainter({
-    this.animationValue,
-    this.minLength,
-    this.maxLength,
-    this.lineWidth,
-    this.spacing,
-    this.lineNum,
-    this.lineColor,
+    required this.animationValue,
+    required this.minLength,
+    required this.maxLength,
+    required this.lineWidth,
+    required this.spacing,
+    required this.lineNum,
+    required this.lineColor,
   }) : offsetLength = <double>[
           minLength + (maxLength - minLength) * .3,
           minLength + (maxLength - minLength) * .7,

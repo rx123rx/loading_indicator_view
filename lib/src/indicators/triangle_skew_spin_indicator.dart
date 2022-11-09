@@ -26,8 +26,8 @@ class TriangleSkewSpinIndicator extends StatefulWidget {
 
 class _TriangleSkewSpinIndicatorState extends State<TriangleSkewSpinIndicator>
     with SingleTickerProviderStateMixin {
-  AnimationController _controller;
-  Animation<double> _rotateX, _rotateY;
+  late AnimationController _controller;
+  late Animation<double> _rotateX, _rotateY;
 
   @override
   void initState() {
@@ -71,9 +71,9 @@ var _count = 0;
 
 class _TriangleSkewSpinIndicatorPainter extends CustomPainter {
   _TriangleSkewSpinIndicatorPainter({
-    this.rotateX,
-    this.rotateY,
-    this.color,
+    required this.rotateX,
+    required this.rotateY,
+    required this.color,
   });
 
   final double rotateX;

@@ -75,12 +75,12 @@ double _lastExtent = .0;
 
 class _BallGridBeatIndicatorPainter extends CustomPainter {
   _BallGridBeatIndicatorPainter({
-    this.animationValue,
-    this.radius,
-    this.minAlpha,
-    this.maxAlpha,
-    this.spacing,
-    this.ballColor,
+    required this.animationValue,
+    required this.radius,
+    required this.minAlpha,
+    required this.maxAlpha,
+    required this.spacing,
+    required this.ballColor,
   }) : alphaList = <double>[
           minAlpha + (maxAlpha - minAlpha) * 0.9,
           minAlpha + (maxAlpha - minAlpha) * 0.8,

@@ -79,15 +79,14 @@ double _lastExtent = .0;
 
 class _LineScaleIndicatorPainter extends CustomPainter {
   _LineScaleIndicatorPainter({
-    this.animationValue,
-    this.minLength,
-    this.maxLength,
-    this.lineWidth,
-    this.spacing,
-    this.lineNum,
-    this.lineColor,
+    required this.animationValue,
+    required this.minLength,
+    required this.maxLength,
+    required this.lineWidth,
+    required this.spacing,
+    required this.lineNum,
+    required this.lineColor,
   }) {
-    offsetLength = <double>[];
     var diffLength = maxLength - minLength;
     for (int i = 0; i < lineNum; i++) {
       offsetLength.add(minLength + diffLength * 2 * i / 10.0);
@@ -102,7 +101,7 @@ class _LineScaleIndicatorPainter extends CustomPainter {
   final int lineNum;
   final Color lineColor;
 
-  List<double> offsetLength;
+  List<double> offsetLength = <double>[];
 
   @override
   void paint(Canvas canvas, Size size) {
